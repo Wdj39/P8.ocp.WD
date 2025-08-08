@@ -327,6 +327,62 @@ html {
 /* =========Responsive Design ========
 ======================================= */
 
+/* écran large */
+
+@media (min-width: 1366px){
+  header { padding: 2em 3em; }
+
+  /* Sections plus larges */
+  #about, #skills, #contact { 
+    max-width: var(--container-xl); 
+    padding: 5em 6em; 
+  }
+
+  /* Mise en page confortable de la section "À propos" */
+  .about-container { min-height: 560px; }
+  .about-text { font-size: 1.05rem; }
+  .about-image img { max-height: 520px; }
+
+  /* Projets en grille (3 colonnes) */
+  .projet_flx{
+    display: grid;
+    grid-template-columns: repeat(3, 25%); /* largeur fixe des cards */
+    gap: 28px;
+    justify-content: center; /* centre les colonnes dans l’espace dispo */
+    margin: 0 auto;
+    margin-bottom: 4%;
+  }
+  .project{
+    width: 100%; 
+    height: 100%;
+    padding: 1.75em;
+  }
+  .project-img{
+    height: 200px;
+  }
+
+  /* Filtres alignés horizontalement */
+  .filters{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .filter-block{
+    width: 100%;
+  }
+  .detail-content.active{
+    max-height: 260px;
+  }
+
+  /* Skills en grille dense */
+  .skills-grid{
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    max-width: var(--container-xl);
+    margin-inline: auto;
+  }
+}
+
+
 /* Navigation adaptative */
 @media (max-width: 768px) {
   header {
@@ -469,3 +525,4 @@ nav a:hover {
     align-items: center;
   }
 }
+
